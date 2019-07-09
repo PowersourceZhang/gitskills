@@ -1,0 +1,7 @@
+#!/bin/bash
+# for srs hls
+mkdir -p /dev/shm/hls && chown nonolive.nonolive /dev/shm/hls
+# for nginx
+sleep 10
+mkdir -p /dev/shm/tengine/cache && chown nginx.root /dev/shm/tengine/cache && systemctl restart tengine
+exit 0
